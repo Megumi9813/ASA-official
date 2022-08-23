@@ -3,7 +3,7 @@ import {Routes, Route} from 'react-router-dom'
 import Home from './pages/Home'
 import './App.scss'
 import About from './pages/About'
-// import Footer from './components/Footer'
+import Footer from './components/Footer'
 import useContentful from './useContentful'
 import Programs from './pages/Programs'
 // import "slick-carousel/slick/slick.css"; 
