@@ -6,8 +6,8 @@ import About from './pages/About'
 import Footer from './components/Footer'
 import useContentful from './useContentful'
 import Programs from './pages/Programs'
-// import "slick-carousel/slick/slick.css"; 
-// import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 import Book from './pages/Book'
 import ScrollToTop from './ScrollToTop'
 import ProgramIntro from './pages/ProgramIntro'
