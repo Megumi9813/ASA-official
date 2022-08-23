@@ -72,7 +72,8 @@ nav {
   left: 0;
   z-index: 100;
   .nav_newsBar {
-    background-color: #495a58;
+    // background-color: #495a58;
+    background-color: #2e4051;
     text-align: center;
     height: 2.5rem;
     display: flex;
@@ -199,7 +200,8 @@ nav {
     .header_container {
       min-height: 70vh;
       .header_description {
-        background-color: #dcd9d0;
+        // background-color: #dcd9d0;
+        background-color: #d1d5da;
         text-align: center;
         padding: 30px 15px;
         display: flex;
@@ -268,7 +270,8 @@ nav {
 
 #services {
   margin-bottom: 0;
-  background-color: #495a58;
+  // background-color: #495a58;
+  background-color: #2e4051;
   .container {
     .section_title {
       text-align: center;
@@ -319,7 +322,8 @@ nav {
   }
   .teacher_list-container {
     padding-top: 50px;
-    background-color: #dcd9d0;
+    // background-color: #dcd9d0;
+    background-color: #d1d5da;
     .container {
       .teacher_list {
         display: flex;
@@ -390,7 +394,8 @@ nav {
           }
           .name {
             text-align: center;
-            background-color: #495a58;
+            // background-color: #495a58;
+            background-color: #2e4051;
             color: #fff;
             padding: 20px 0;
           }
@@ -401,7 +406,8 @@ nav {
 }
 
 #footer {
-  background-color: #495a58;
+  // background-color: #495a58;
+  background-color: #2e4051;
   .container {
     padding: 0 15px 20px 15px;
     .footer_wrapper {
@@ -427,7 +433,8 @@ nav {
           justify-content: space-between;
           input {
             width: 60%;
-            background-color: #495a58;
+            // background-color: #495a58;
+            background-color: #2e4051;
             border: none;
             border-bottom: 1px solid #fbfbf3;
           }
