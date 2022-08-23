@@ -1,0 +1,5 @@
+[[redirects]]
+    from = "/asa-membership"
+    to = "https://hilarious-bonbon-7a9f21.netlify.app/"
+    status = 301
+    force = true
