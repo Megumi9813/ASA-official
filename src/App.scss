@@ -227,13 +227,13 @@ nav {
   a {
     .toTop {
       cursor: pointer;
-      // border: 2px solid #ba8a6e;
-      border: none;
+      border: 2px solid #ba8a6e;
+      // border: none;
       color: #ba8a6e;
-      width: 50px;
-      height: 50px;
+      width: 70px;
+      height: 70px;
       font-size: 16px;
-      border-radius: 25px;
+      border-radius: 50%;
       background-color: transparent;
       position: fixed;
       top: 50%;
