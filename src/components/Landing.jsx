@@ -17,12 +17,6 @@ function Landing() {
         </div>
       </header>
       <a href="#">
-          <button className="toTop">
-            <FontAwesomeIcon icon="fa-up-long" />
-            {/* <span>TO TOP</span> */}
-          </button>
-      </a>
-      <a href="#">
         <button className='mail_btn'>
           <FontAwesomeIcon icon="fa-envelope" />
         </button>
