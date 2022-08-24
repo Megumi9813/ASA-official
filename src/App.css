@@ -286,8 +286,8 @@ nav .nav_container .nav_links .btn_menu {
   border-radius: 50%;
   background-color: transparent;
   position: fixed;
-  top: 50%;
   right: 48px;
+  bottom: 130px;
   z-index: 100;
   display: -webkit-box;
   display: -ms-flexbox;
