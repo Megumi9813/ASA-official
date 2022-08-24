@@ -19,7 +19,7 @@ function Landing() {
       <a href="#">
           <button className="toTop">
             <FontAwesomeIcon icon="fa-up-long" />
-            <span>TO TOP</span>
+            {/* <span>TO TOP</span> */}
           </button>
       </a>
       <a href="#">
