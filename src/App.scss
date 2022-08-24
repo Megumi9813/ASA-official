@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -13,7 +14,6 @@ body {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 48px 0;
 }
 
 section {
@@ -96,6 +96,7 @@ nav {
       padding-left: 24px;
       img {
         width: 100%;
+        max-height: 4.5rem;
         max-width: 250px;
       }
     }
@@ -200,8 +201,8 @@ nav {
     .header_container {
       min-height: 70vh;
       .header_description {
-        // background-color: #dcd9d0;
-        background-color: #d1d5da;
+        background-color: #dcd9d0;
+        // background-color: #d1d5da;
         text-align: center;
         padding: 30px 15px;
         display: flex;
@@ -221,6 +222,54 @@ nav {
           width: 100%;
         }
       }
+    }
+  }
+  a {
+    .toTop {
+      cursor: pointer;
+      border: 2px solid #ba8a6e;
+      color: #ba8a6e;
+      width: 50px;
+      height: 140px;
+      font-size: 16px;
+      border-radius: 25px;
+      background-color: transparent;
+      position: fixed;
+      top: 50%;
+      right: 56px;
+      z-index: 100;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      svg {
+        margin-bottom: 16px;
+      }
+      span {
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+      }
+    }
+    .toTop:hover {
+      background-color: #ba8a6e;
+      color: #fff;
+      transition: all 0.4s ease;
+    }
+    .mail_btn {
+      cursor: pointer;
+      width: 70px;
+      height: 70px;
+      font-size: 32px;
+      border-radius: 50%;
+      border: none;
+      background-color: #2e4051;
+      // background-color: #ba8a6e;
+      color: #fff;
+      position: fixed;
+      bottom: 40px;
+      right: 48px;
+      z-index: 100;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 28%);
     }
   }
 }
@@ -322,8 +371,8 @@ nav {
   }
   .teacher_list-container {
     padding-top: 50px;
-    // background-color: #dcd9d0;
-    background-color: #d1d5da;
+    background-color: #dcd9d0;
+    // background-color: #d1d5da;
     .container {
       .teacher_list {
         display: flex;
@@ -613,7 +662,8 @@ nav {
 #testimonials {
   text-align: center;
   .testimonials_container {
-    background-color: #495a58;
+    // background-color: #495a58;
+    background-color: #2e4051;
     color: #fff;
     .container {
       .testimonial_list {
@@ -664,7 +714,8 @@ nav {
           text-align: left;
           border-radius: 5px;
           position: relative;
-          background-color: #495a58;
+          // background-color: #495a58;
+          background-color: #2e4051;
           padding: 24px;
           margin-bottom: 24px;
           font-size: 0.8rem;
@@ -1154,6 +1205,7 @@ nav {
 @media (min-width: 1024px) {
   nav {
     .nav_container {
+      padding: 0 24px;
       .nav_logo {
         width: auto;
       }
@@ -1298,11 +1350,11 @@ nav {
     }
   }
 
-  #footer {
-    .container {
-      padding: 0 8% 20px 10%;
-    }
-  }
+  // #footer {
+  //   .container {
+  //     // padding: 0 8% 20px 10%;
+  //   }
+  // }
 
   #faqs {
     .container {

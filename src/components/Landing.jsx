@@ -1,5 +1,6 @@
 import React from 'react'
 import LandingImg from '../assets/LandingImg.jpg'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 function Landing() {
   return (
@@ -15,6 +16,17 @@ function Landing() {
               </figure>
         </div>
       </header>
+      <a href="#">
+          <button className="toTop">
+            <FontAwesomeIcon icon="fa-up-long" />
+            <span>TO TOP</span>
+          </button>
+      </a>
+      <a href="#">
+        <button className='mail_btn'>
+          <FontAwesomeIcon icon="fa-envelope" />
+        </button>
+      </a>
     </section>
   )
 }
