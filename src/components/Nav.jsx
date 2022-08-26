@@ -32,7 +32,7 @@ function Nav() {
               </Link>
             </li>
             <li className='nav_list'>
-              <Link to="/Book" className='nav_link font01'>
+              <Link to="/Booking" className='nav_link font01'>
                 Book a Test
               </Link>
             </li>
@@ -71,7 +71,7 @@ function Nav() {
                     </Link>
                 </li>
                 <li className='menu_list'>
-                    <Link to="/Book" className='menu__ink' onClick={closeMenu}>
+                    <Link to="/Booking" className='menu__ink' onClick={closeMenu}>
                       Book a Test
                     </Link>
                 </li>

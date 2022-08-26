@@ -16,11 +16,6 @@ function Landing() {
               </figure>
         </div>
       </header>
-      <a href="#">
-        <button className='mail_btn'>
-          <FontAwesomeIcon icon="fa-envelope" />
-        </button>
-      </a>
     </section>
   )
 }

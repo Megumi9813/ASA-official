@@ -104,6 +104,222 @@ section {
   transition: all 0.4s ease;
 }
 
+#contact .mail_btn {
+  cursor: pointer;
+  width: 70px;
+  height: 70px;
+  font-size: 32px;
+  border-radius: 50%;
+  border: none;
+  background-color: #2e4051;
+  color: #fff;
+  position: fixed;
+  bottom: 40px;
+  right: 48px;
+  z-index: 2003;
+  -webkit-box-shadow: 0 12px 30px black;
+          box-shadow: 0 12px 30px black;
+}
+
+#contact .contact_background {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+  background: #333;
+  z-index: 2000;
+}
+
+#contact .contact_container {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2002;
+  padding-top: 24px;
+}
+
+#contact .contact_container .contact-wrapper {
+  max-width: 90vw;
+  border-radius: 8px;
+  width: 768px;
+  position: relative;
+  background-color: #fff;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+#contact .contact_container .contact-wrapper .contact_header button {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  z-index: 2004;
+  background-color: rgba(14, 19, 24, 0.7);
+  padding: 8px;
+  border-radius: 50%;
+  color: #fff;
+}
+
+#contact .contact_container .contact-wrapper .contact_body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#contact .contact_container .contact-wrapper .contact_body .contact_half-img {
+  display: none;
+  width: 50%;
+}
+
+#contact .contact_container .contact-wrapper .contact_body .contact_half-img img {
+  width: 100%;
+  vertical-align: middle;
+  border-radius: 8px 0 0 8px;
+}
+
+#contact .contact_container .contact-wrapper .contact_body .contact_half-form {
+  position: relative;
+  width: 100%;
+  padding: 20px 36px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#contact .contact_container .contact-wrapper .contact_body .contact_half-form h3 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #2e4051;
+}
+
+#contact .contact_container .contact-wrapper .contact_body .contact_half-form form {
+  color: #2e4051;
+}
+
+#contact .contact_container .contact-wrapper .contact_body .contact_half-form form .form__item {
+  margin-bottom: 20px;
+}
+
+#contact .contact_container .contact-wrapper .contact_body .contact_half-form form .form__item label {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#contact .contact_container .contact-wrapper .contact_body .contact_half-form form .form__item input,
+#contact .contact_container .contact-wrapper .contact_body .contact_half-form form .form__item textarea {
+  height: 40px;
+  width: 100%;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 3px solid #2e4051;
+  outline: none;
+}
+
+#contact .contact_container .contact-wrapper .contact_body .contact_half-form form .form__item textarea {
+  height: 100px;
+}
+
+#contact .contact_container .contact-wrapper .contact_body .contact_half-form form button {
+  background-color: #ba8a6e;
+  border: none;
+  border-radius: 8px;
+  width: 100%;
+  color: #fff;
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#contact .open {
+  display: block;
+}
+
+#contact .modal__overlay {
+  border-radius: 8px 8px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: -1;
+}
+
+#contact .modal__overlay--visible {
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#contact .modal__overlay--loading {
+  background-color: #2e4051;
+  font-size: 80px;
+  color: #fff;
+}
+
+#contact .modal__overlay--loading .fa-spinner {
+  -webkit-animation: spinner 750ms infinite linear;
+          animation: spinner 750ms infinite linear;
+}
+
+@-webkit-keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+#contact .modal__overlay--success {
+  color: #fff;
+  background-color: #ba8a6e;
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+  padding: 28px;
+}
+
 nav {
   position: fixed;
   right: 0;
@@ -317,23 +533,6 @@ nav .nav_container .nav_links .btn_menu {
 
 #landing header .header_container .header_img-wrapper img {
   width: 100%;
-}
-
-#landing a .mail_btn {
-  cursor: pointer;
-  width: 70px;
-  height: 70px;
-  font-size: 32px;
-  border-radius: 50%;
-  border: none;
-  background-color: #2e4051;
-  color: #fff;
-  position: fixed;
-  bottom: 40px;
-  right: 48px;
-  z-index: 100;
-  -webkit-box-shadow: 0 12px 30px black;
-          box-shadow: 0 12px 30px black;
 }
 
 #systemChart .container .system_intro {
@@ -916,13 +1115,81 @@ nav .nav_container .nav_links .btn_menu {
 }
 
 #booking {
+  color: #2e4051;
   padding-top: 9rem;
 }
 
-#booking .booking_container .container iframe {
-  border: none;
+#booking .booking_container .container .booking_list {
+  list-style: none;
+  padding: 0 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#booking .booking_container .container .booking_list a {
+  text-decoration: none;
+  color: #2e4051;
   width: 100%;
-  height: 600px;
+}
+
+#booking .booking_container .container .booking_list a .booking_item {
+  -webkit-box-shadow: 0 1px 6px black;
+          box-shadow: 0 1px 6px black;
+  padding: 24px;
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+#booking .booking_container .container .booking_list a .booking_item h3 {
+  padding-bottom: 8px;
+}
+
+#booking .booking_container .container .booking_list a .booking_item .booking_item-info {
+  padding-top: 10px;
+  border-top: 2px solid lightgray;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+#booking .booking_container .container .booking_list a .booking_item .booking_item-info .booking_teacher {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 8px;
+}
+
+#booking .booking_container .container .booking_list a .booking_item .booking_item-info .booking_teacher span {
+  margin-left: 8px;
+}
+
+#booking .booking_container .container .booking_list a .booking_item .booking_item-info .booking_during svg {
+  margin-right: 8px;
+}
+
+#booking .booking_container .container .booking_list a .booking_item .booking_item-info button {
+  margin-top: 8px;
+  width: 100%;
 }
 
 #programIntro {
@@ -1036,7 +1303,27 @@ nav .nav_container .nav_links .btn_menu {
   width: 100%;
 }
 
+#calendar iframe {
+  border: none;
+  width: 100%;
+  height: 800px;
+  padding-top: 9rem;
+}
+
 @media (min-width: 768px) {
+  #contact .contact_container .contact-wrapper .contact_body .contact_half-img {
+    display: block;
+    width: 50%;
+  }
+  #contact .contact_container .contact-wrapper .contact_body .contact_half-img img {
+    width: 100%;
+    vertical-align: middle;
+    border-radius: 8px 0 0 8px;
+  }
+  #contact .contact_container .contact-wrapper .contact_body .contact_half-form {
+    width: 50%;
+    padding: 40px 72px;
+  }
   .container {
     text-align: center;
   }
@@ -1364,6 +1651,9 @@ nav .nav_container .nav_links .btn_menu {
     -webkit-box-direction: reverse;
         -ms-flex-direction: row-reverse;
             flex-direction: row-reverse;
+  }
+  #booking .booking_container .container .booking_list a {
+    width: 32%;
   }
 }
 

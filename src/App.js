@@ -13,6 +13,8 @@ import ScrollBackToTop from './ScrollBackToTop'
 import ProgramIntro from './pages/ProgramIntro'
 import Blogs from './pages/Blogs'
 import ScrollToTop from './components/ScrollToTop'
+import Calendar from './pages/Calendar'
+import Contact from './components/Contact'
 
 function App() {
   ScrollBackToTop();
@@ -31,14 +33,16 @@ function App() {
 
   return (
     <div className="App">
+      <Contact />
       <ScrollToTop />
       <Routes>
         <Route path='/' element={<Home teachers={teachers} />} />
         <Route path='/About' element={<About teachers={teachers} testimonials={testimonials} />} />
         <Route path='/Programs' element={<Programs testimonials={testimonials} />} />
-        <Route path='/Book' element={<Book />}  />
+        <Route path='/Booking' element={<Book teachers={teachers} />}  />
         <Route path='/Blog' element={<Blogs blogs={blogs} />}  />
         <Route path='/ProgramIntro' element={<ProgramIntro />}  />
+        <Route path='/Booking/calendar' element={<Calendar />}  />
       </Routes>
       <Footer />
     </div>

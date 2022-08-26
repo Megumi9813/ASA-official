@@ -22,9 +22,6 @@ section {
 
 .font01 {
   font-family: "Open Sans", sans-serif;
-  // font-family: "Source Sans Pro", sans-serif;
-  // font-family: "Montserrat", sans-serif;
-  // font-family: "Lato", sans-serif;
   font-weight: 100;
 }
 
@@ -90,6 +87,176 @@ section {
   background-color: #ba8a6e;
   color: #fff;
   transition: all 0.4s ease;
+}
+
+#contact {
+  .mail_btn {
+    cursor: pointer;
+    width: 70px;
+    height: 70px;
+    font-size: 32px;
+    border-radius: 50%;
+    border: none;
+    background-color: #2e4051;
+    color: #fff;
+    position: fixed;
+    bottom: 40px;
+    right: 48px;
+    z-index: 2003;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 28%);
+  }
+
+  .contact_background {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    background: #333;
+    z-index: 2000;
+  }
+
+  .contact_container {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2002;
+    padding-top: 24px;
+    .contact-wrapper {
+      max-width: 90vw;
+      border-radius: 8px;
+      width: 768px;
+      position: relative;
+      background-color: #fff;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      .contact_header {
+        button {
+          width: 40px;
+          height: 40px;
+          position: absolute;
+          top: 20px;
+          right: 20px;
+          border: none;
+          cursor: pointer;
+          font-size: 16px;
+          z-index: 2004;
+          background-color: rgba(14, 19, 24, 0.7);
+          padding: 8px;
+          border-radius: 50%;
+          color: #fff;
+        }
+      }
+      .contact_body {
+        display: flex;
+        .contact_half-img {
+          display: none;
+          width: 50%;
+          img {
+            width: 100%;
+            vertical-align: middle;
+            border-radius: 8px 0 0 8px;
+          }
+        }
+        .contact_half-form {
+          position: relative;
+          width: 100%;
+          padding: 20px 36px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          h3 {
+            font-size: 22px;
+            margin-bottom: 20px;
+            color: #2e4051;
+          }
+          form {
+            color: #2e4051;
+            .form__item {
+              margin-bottom: 20px;
+              label {
+                font-size: 14px;
+                font-weight: bold;
+              }
+              input,
+              textarea {
+                height: 40px;
+                width: 100%;
+                border-top: none;
+                border-left: none;
+                border-right: none;
+                border-bottom: 3px solid #2e4051;
+                outline: none;
+              }
+              textarea {
+                height: 100px;
+              }
+            }
+            button {
+              background-color: #ba8a6e;
+              border: none;
+              border-radius: 8px;
+              width: 100%;
+              color: #fff;
+              padding: 12px 24px;
+              font-size: 18px;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .open {
+    display: block;
+  }
+  .modal__overlay {
+    border-radius: 8px 8px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+  }
+  .modal__overlay--visible {
+    z-index: 1;
+    display: flex;
+  }
+  .modal__overlay--loading {
+    background-color: #2e4051;
+    font-size: 80px;
+    color: #fff;
+    .fa-spinner {
+      animation: spinner 750ms infinite linear;
+    }
+    @keyframes spinner {
+      0% {
+        transform: rotate(0);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  }
+  .modal__overlay--success {
+    color: #fff;
+    background-color: #ba8a6e;
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    padding: 28px;
+  }
 }
 
 nav {
@@ -248,23 +415,6 @@ nav {
           width: 100%;
         }
       }
-    }
-  }
-  a {
-    .mail_btn {
-      cursor: pointer;
-      width: 70px;
-      height: 70px;
-      font-size: 32px;
-      border-radius: 50%;
-      border: none;
-      background-color: #2e4051;
-      color: #fff;
-      position: fixed;
-      bottom: 40px;
-      right: 48px;
-      z-index: 100;
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 28%);
     }
   }
 }
@@ -750,13 +900,55 @@ nav {
 }
 
 #booking {
+  color: #2e4051;
   padding-top: 9rem;
   .booking_container {
     .container {
-      iframe {
-        border: none;
-        width: 100%;
-        height: 600px;
+      .booking_list {
+        list-style: none;
+        padding: 0 5%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        a {
+          text-decoration: none;
+          color: #2e4051;
+          width: 100%;
+          .booking_item {
+            box-shadow: 0 1px 6px rgba(0, 0, 0, 10%);
+            padding: 24px;
+            margin-bottom: 16px;
+            width: 100%;
+            h3 {
+              padding-bottom: 8px;
+            }
+            .booking_item-info {
+              padding-top: 10px;
+              border-top: 2px solid lightgray;
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+              .booking_teacher {
+                display: flex;
+                align-items: center;
+                margin-bottom: 8px;
+                span {
+                  margin-left: 8px;
+                }
+              }
+              .booking_during {
+                svg {
+                  margin-right: 8px;
+                }
+              }
+              button {
+                margin-top: 8px;
+                width: 100%;
+              }
+            }
+          }
+        }
       }
     }
   }
@@ -852,7 +1044,37 @@ nav {
   }
 }
 
+#calendar {
+  iframe {
+    border: none;
+    width: 100%;
+    height: 800px;
+    padding-top: 9rem;
+  }
+}
+
 @media (min-width: 768px) {
+  #contact {
+    .contact_container {
+      .contact-wrapper {
+        .contact_body {
+          .contact_half-img {
+            display: block;
+            width: 50%;
+            img {
+              width: 100%;
+              vertical-align: middle;
+              border-radius: 8px 0 0 8px;
+            }
+          }
+          .contact_half-form {
+            width: 50%;
+            padding: 40px 72px;
+          }
+        }
+      }
+    }
+  }
   .container {
     text-align: center;
   }
@@ -1195,6 +1417,18 @@ nav {
       }
     }
   }
+
+  #booking {
+    .booking_container {
+      .container {
+        .booking_list {
+          a {
+            width: 32%;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media (min-width: 1024px) {
@@ -1344,12 +1578,6 @@ nav {
       }
     }
   }
-
-  // #footer {
-  //   .container {
-  //     // padding: 0 8% 20px 10%;
-  //   }
-  // }
 
   #faqs {
     .container {
