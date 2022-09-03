@@ -10,7 +10,7 @@ function Teacher({teacher}) {
             <img src={teacher.img} alt="" />
             <div className="teacher_tag">
                 <p className='color02 font02'>{teacher.name}</p>
-                <p className='color02 font01 teacher_position'>{teacher.position}</p>
+                {/* <p className='color02 font01 teacher_position'>{teacher.position}</p> */}
             </div>
         </figure>
         <p className='teacher_para color02 font01'>
