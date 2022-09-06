@@ -640,7 +640,10 @@ nav {
       .footer_right {
         display: flex;
         .link_item {
-          line-height: 1.5;
+          a {
+            color: #fff;
+            text-decoration: none;
+          }
         }
         .social {
           width: 50%;
