@@ -8,7 +8,7 @@ function System() {
         <div className="container">
             <div className="section_intro">
                 <h2 className='section_title font02 color02'>How It Works</h2>
-                <p className='font01 color02'>Providing English language training based on the most effective approaches to language acquisition in order to maximize performance on standardized tests such as SAT, TOEFL, Cambridge and IELTS.</p>
+                <p className='font01 color02'>Providing English language training based on the most effective approaches to language acquisition in order to maximize performance on standardized tests such as CELPIP, SAT, TOEFL, Cambridge and IELTS.</p>
             </div>
             <div className="system_chart">
                 <ul className='system_chart-list color02 font01'>
