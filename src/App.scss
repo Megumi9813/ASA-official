@@ -38,13 +38,21 @@ section {
   color: #3f4a49;
 }
 
-.btn {
+.btn,
+.submitted-btn {
   border: none;
   background-color: #ba8a6e;
   color: #fbfbf3;
-  padding: 15px 40px;
   border-radius: 3px;
   font-size: 0.8rem;
+}
+
+.btn {
+  padding: 15px 40px;
+}
+
+.submitted-btn {
+  padding: 15px;
 }
 
 .section_intro {
@@ -464,7 +472,7 @@ nav {
 
 #services {
   margin-bottom: 0;
-  // background-color: #495a58;
+  padding: 48px 0;
   background-color: #2e4051;
   .container {
     .section_title {
@@ -497,6 +505,9 @@ nav {
 
 #team {
   .teacher_para {
+    display: none;
+  }
+  .expand-button {
     display: none;
   }
 }
@@ -532,14 +543,14 @@ nav {
               vertical-align: bottom;
             }
           }
-          p {
-            button {
-              border: none;
-              background-color: #dcd9d0;
-              color: #ba8a6e;
-              padding-left: 5px;
-              font-weight: bold;
-              font-size: 16px;
+          button {
+            border: none;
+            background-color: #dcd9d0;
+            color: #ba8a6e;
+            font-weight: bold;
+            font-size: 16px;
+            span {
+              padding-left: 0.25em;
             }
           }
           .teacher_tag {
@@ -550,7 +561,7 @@ nav {
             position: absolute;
             bottom: -20px;
             right: -15px;
-            text-align: left;
+            text-align: center;
           }
         }
       }
@@ -627,12 +638,17 @@ nav {
           justify-content: space-between;
           input {
             width: 60%;
+            color: white;
             // background-color: #495a58;
             background-color: #2e4051;
             border: none;
             border-bottom: 1px solid #fbfbf3;
           }
-          .btn {
+          input:focus {
+            outline: none;
+          }
+          .btn,
+          .submitted-btn {
             width: 35%;
           }
         }
@@ -640,6 +656,7 @@ nav {
       .footer_right {
         display: flex;
         .link_item {
+          padding-bottom: 8px;
           a {
             color: #fff;
             text-decoration: none;
@@ -682,7 +699,7 @@ nav {
         .teacher_para {
           font-size: 16px;
           padding-top: 32px;
-          text-align: left;
+          text-align: center;
         }
       }
     }
@@ -728,6 +745,7 @@ nav {
       list-style: none;
       column-count: 1;
       .blog_item {
+        border: 1px solid rgb(226, 226, 226);
         page-break-inside: avoid;
         break-inside: avoid;
         margin-bottom: 24px;
@@ -736,8 +754,11 @@ nav {
           vertical-align: bottom;
         }
         .blog_info-wrapper {
-          text-align: center;
-          padding: 16px 0;
+          text-align: initial;
+          padding: 32px 24px;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
           .date {
             font-size: 14px;
           }
@@ -752,9 +773,12 @@ nav {
             border: none;
             color: #ba8a6e;
             background-color: #fff;
-            border-bottom: 1px solid #ba8a6e;
+            // border-bottom: 1px solid #ba8a6e;
           }
         }
+      }
+      .blog_item:hover {
+        box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.2);
       }
     }
   }
@@ -815,7 +839,13 @@ nav {
     color: #fff;
     .container {
       .testimonial_list {
-        padding: 0 32px;
+        padding: 0 32px 32px 32px;
+        .carousel-slider {
+          padding-bottom: 24px;
+          .slider-wrapper {
+            margin-bottom: 16px;
+          }
+        }
       }
     }
   }

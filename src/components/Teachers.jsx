@@ -13,7 +13,6 @@ function Teachers({teachers}) {
                 <ul className="teacher_list">
                     {   
                         teachers
-                        .sort((a, b) => a.id - b.id)
                         .map(teacher => (
                             <Teacher teacher={teacher} key={teacher.id}/>
                         ))

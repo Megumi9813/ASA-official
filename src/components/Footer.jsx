@@ -1,8 +1,31 @@
-import React from 'react'
-import AsaLogoBrown from '../assets/AsaLogoBrown.png'
+import { useEffect, useState } from "react";
+import AsaLogoBrown from "../assets/AsaLogoBrown.png";
 import { Link } from "react-router-dom";
+import { EmailJSResponseStatus } from "@emailjs/browser";
+import { serverTimestamp, addDoc, collection } from "firebase/firestore";
+import { db } from "../firebase";
 
 function Footer() {
+  const [submitted, setSubmitted] = useState(
+    localStorage.getItem("submitted") === "false"
+  );
+  const [data, setData] = useState("");
+
+  const handleAdd = async (e) => {
+    e.preventDefault();
+    try {
+      await addDoc(collection(db, "subscribers"), {
+        timeStamp: serverTimestamp(),
+        email: data,
+      });
+      setSubmitted(true);
+      localStorage.setItem("submitted", true);
+      console.log("submitted");
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   return (
     <div id="footer">
       <div className="container color01">
@@ -15,10 +38,30 @@ function Footer() {
               For our latest membership plan and Blog subscribe below
             </p>
             <div className="email_container">
-              <input type="email" />
-              <button className="btn">Send</button>
+              <input
+                type="email"
+                placeholder="exmaple@email.com"
+                onChange={(e) => {
+                  setData(e.target.value);
+                }}
+              />
+              {submitted ? (
+                <button className="submitted-btn">Submitted</button>
+              ) : (
+                <button
+                  className="btn"
+                  onClick={handleAdd}
+                  style={{ cursor: "pointer" }}
+                >
+                  Send
+                </button>
+              )}
             </div>
-            <p className="font01">Thanks for submitting!</p>
+            {submitted ? (
+              <p className="font01">Thanks for submitting!</p>
+            ) : (
+              <></>
+            )}
           </div>
           <div className="footer_right">
             <div className="menu font02">
@@ -120,4 +163,4 @@ function Footer() {
   );
 }
 
-export default Footer
+export default Footer;

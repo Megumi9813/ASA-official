@@ -28,7 +28,7 @@ function Booking({teachers}) {
                       .slice(5, 6)
                       .map((teacher) => (
                         <>
-                          <Avatar src={teacher.img} />
+                          {/* <Avatar src={teacher.img} /> */}
                           <span>{teacher.name}</span>
                         </>
                       ))}

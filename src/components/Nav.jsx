@@ -14,7 +14,7 @@ function Nav() {
   return (
     <nav>
       <div className="nav_newsBar color01 font02">
-          <h3>Limited Time Offer for 6 months sucscription plan!</h3>
+          <h3>Check out our new membership plan!</h3>
       </div>
       <div className="nav_container">
           <Link to="/" className='nav_logo'>
