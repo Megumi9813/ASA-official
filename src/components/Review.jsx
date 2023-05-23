@@ -14,11 +14,13 @@ function Review() {
               <div className="review">
                 <h2 className="font02 color02">Student Stories</h2>
                 <p className="color02 font01">
-                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe harum a consectetur laborum illum minus, eligendi eius qui, incidunt  temporibus natus.
+                  With the assistance of the exceptional teachers and programs
+                  here, you are on the right path to pursue whatever you aspire
+                  to achieve in the future.
                 </p>
               </div>
               <div className="name font02">
-                <h4>Laura L (Chile)</h4>
+                <h4>Miki T. (Japan)</h4>
               </div>
             </li>
           </ul>
