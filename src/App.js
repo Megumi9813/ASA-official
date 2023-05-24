@@ -33,7 +33,7 @@ function App() {
       try {
         const querySnapshot = await getDocs(collection(db, "teachers"));
         querySnapshot.forEach((doc) => {
-          list.push({id: doc.id, ...doc.data()});
+          list.push({ id: doc.id, ...doc.data() });
         });
         setTeachers(list);
       } catch (err) {
@@ -46,15 +46,14 @@ function App() {
       try {
         const querySnapshot = await getDocs(collection(db, "blogs"));
         querySnapshot.forEach((doc) => {
-          list.push({id: doc.id, ...doc.data()});
+          list.push({ id: doc.id, ...doc.data() });
         });
         setBlogs(list);
       } catch (err) {
         console.log(err);
       }
-    }
+    };
     fetchBlogs();
-    console.log(blogs);
   }, []);
 
   useEffect(() => {
@@ -63,7 +62,8 @@ function App() {
       // setBlogs(res.blogSanitizedResponse);
       setTestimonials(res.testimonialSanitizedResponse);
     });
-  });
+    console.log(blogs.map((blog) => blog.id))
+  }, [blogs]);
 
   return (
     <div className="App">
@@ -83,9 +83,13 @@ function App() {
         <Route path="/Blog" element={<Blogs blogs={blogs} />} />
         <Route path="/ProgramIntro" element={<ProgramIntro />} />
         <Route path="/Booking/calendar" element={<Calendar />} />
-        {blogs.map((blog) => (
-          <Route path={blog.id} element={<BlogPage />} />
-        ))}
+        {blogs.length > 0 &&
+          blogs.map((blog) => (
+            <Route
+              path={"/Blog/" + blog.id}
+              element={<BlogPage blog={blog} />}
+            />
+          ))}
       </Routes>
       <Footer />
     </div>
