@@ -9,7 +9,7 @@ function Blog({blog}) {
   // }, [])
 
   return (
-    <Link to={blog.id}>
+    <Link to={blog.id} style={{textDecoration: "none"}}>
       <li className="blog_item">
         <img src={blog.img} alt="" />
         <div className="blog_info-wrapper">

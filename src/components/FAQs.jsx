@@ -15,7 +15,7 @@ function FAQs() {
                     </li>
                     <li className="faq_item">
                         <p className="question font02">How much are classes?</p>
-                        <p className="answer">Prices start at $40 Canadian dollars for one-to-one classes and are negotiable for group classes.</p>
+                        <p className="answer">Prices start at $50 Canadian dollars for one-to-one classes and are negotiable for group classes.</p>
                     </li>
                     <li className="faq_item">
                         <p className="question font02">What do I need to have for these classes?</p>

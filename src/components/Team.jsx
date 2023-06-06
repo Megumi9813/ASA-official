@@ -7,7 +7,7 @@ function Team({teachers}) {
     <section id="team">
       <div className="section_intro">
         <h2 className="section_title font02 color02">Our Team.</h2>
-        <p className="font01 color02">
+        <p className="font01 color02" style={{maxWidth: "1200px", margin: "0 auto"}}>
           Having over 70 years of combined teaching experience, we are a group
           of dedicated education professionals who have taught students from a
           wide range of ages in Canada and overseas. We use literature, direct
@@ -21,7 +21,7 @@ function Team({teachers}) {
         <div className="container">
           <ul className="teacher_list">
             {teachers
-              .sort((a, b) => a.id - b.id)
+              .sort((a, b) => a.order - b.order)
               .slice(0, 4)
               .map((teacher) => (
                 <Teacher teacher={teacher} key={teacher.id} />

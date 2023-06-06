@@ -6,16 +6,16 @@ export default function BlogPage(blog) {
     <>
       <Nav />
       <section id="blogPage">
-        <div className="container">
+        <div className="container" style={{maxWidth: "65%"}}>
           <div className="section_intro">
             <div className="section_title font02 color02">
               {blog.blog.title}
             </div>
           </div>
-          <figure style={{ width: "50%", margin: "0 auto" }}>
+          <figure style={{ margin: "0 auto" }}>
             <img src={blog.blog.img} alt="" style={{ width: "100%" }} />
           </figure>
-          <div>{blog.blog.article}</div>
+          <div style={{marginTop: "30px", textAlign: "initial"}}>{blog.blog.article}</div>
         </div>
       </section>
     </>
