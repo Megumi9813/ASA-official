@@ -25,6 +25,7 @@ function App() {
   const [teachers, setTeachers] = useState([]);
   const [blogs, setBlogs] = useState([]);
   const [testimonials, setTestimonials] = useState([]);
+  const [reviews, setReviews] = useState([]);
   const { getData } = useContentful();
 
   useEffect(() => {
@@ -54,6 +55,19 @@ function App() {
       }
     };
     fetchBlogs();
+    const fetchTestimonials = async () => {
+      let list = [];
+      try {
+        const querySnapshot = await getDocs(collection(db, "testimonials"));
+        querySnapshot.forEach((doc) => {
+          list.push({ id: doc.id, ...doc.data() });
+        });
+        setReviews(list);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    fetchTestimonials();
   }, []);
 
   useEffect(() => {
@@ -62,7 +76,6 @@ function App() {
       // setBlogs(res.blogSanitizedResponse);
       setTestimonials(res.testimonialSanitizedResponse);
     });
-    console.log(blogs.map((blog) => blog.id))
   }, [blogs]);
 
   return (
@@ -70,7 +83,7 @@ function App() {
       <Contact />
       <ScrollToTop />
       <Routes>
-        <Route path="/" element={<Home teachers={teachers} />} />
+        <Route path="/" element={<Home teachers={teachers} reviews={reviews}/>} />
         <Route
           path="/About"
           element={<About teachers={teachers} testimonials={testimonials} />}

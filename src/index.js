@@ -26,6 +26,8 @@ import {
   faSpinner,
   faPlus,
   faMinus,
+  faAngleRight,
+  faAngleLeft,
 } from "@fortawesome/free-solid-svg-icons";
 
 library.add(
@@ -50,7 +52,9 @@ library.add(
   faXmark,
   faSpinner,
   faPlus,
-  faMinus
+  faMinus,
+  faAngleRight,
+  faAngleLeft
 );
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

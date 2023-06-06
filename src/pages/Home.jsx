@@ -6,17 +6,17 @@ import Team from '../components/Team'
 import Review from '../components/Review'
 import Nav from '../components/Nav'
 
-function Home({teachers}) {
+function Home({ teachers, reviews }) {
   return (
     <>
       <Nav />
       <Landing />
-      <Team teachers={teachers}/>
+      <Team teachers={teachers} />
       <SystemChart />
       <Services />
-      <Review />
+      <Review reviews={reviews}/>
     </>
-  )
+  );
 }
 
 export default Home

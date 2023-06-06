@@ -1,7 +1,9 @@
 import React from 'react'
 import ReviewImg from '../assets/Review.jpg'
+import Slider from '../components/UI/Slider'
 
-function Review() {
+function Review({ reviews }) {
+
   return (
     <section
       id="review"
@@ -11,7 +13,8 @@ function Review() {
         <div className="review_container">
           <ul className="review_list">
             <li className="review_item">
-              <div className="review">
+              <Slider reviews={reviews} />
+              {/* <div className="review">
                 <h2 className="font02 color02">Student Stories</h2>
                 <p className="color02 font01">
                   With the assistance of the exceptional teachers and programs
@@ -21,7 +24,7 @@ function Review() {
               </div>
               <div className="name font02">
                 <h4>Miki T. (Japan)</h4>
-              </div>
+              </div> */}
             </li>
           </ul>
         </div>
