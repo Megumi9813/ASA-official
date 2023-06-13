@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Slider({ reviews }) {
   const [currentSlide, setCurrentSlide] = useState(0);
+  console.log(reviews);
 
   return (
     <>
@@ -40,7 +41,13 @@ function Slider({ reviews }) {
               )}
             </div>
             <div className="color02 font01" style={{ width: "60%" }}>
-              {reviews[currentSlide].comments}
+              {reviews[currentSlide].comments.map((comment, index) => (
+                <>
+                  <div key={index}>{comment}</div>
+                  <br />
+                </>
+              ))}
+              {/* {reviews[currentSlide].comments[0]} */}
             </div>
             <div
               style={{
