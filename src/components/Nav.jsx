@@ -41,11 +41,11 @@ function Nav() {
                 Blog
               </Link>
             </li>
-            <Link to="/asa_membership" target="_blank" rel="noopener noreferrer">
+            {/* <Link to="/asa_membership" target="_blank" rel="noopener noreferrer">
               <button className='btn font01'>
                   Membership
               </button>
-            </Link>
+            </Link> */}
             <button className='btn_menu'>
               <FontAwesomeIcon icon="bars" onClick={openMenu}/>
             </button>
@@ -80,11 +80,11 @@ function Nav() {
                       Blog
                     </Link>
                 </li>
-                <Link to="/asa-membership" target="_blank" rel="noopener noreferrer">
+                {/* <Link to="/asa-membership" target="_blank" rel="noopener noreferrer">
                   <button className='btn'>
                       Membership
                   </button>
-                </Link>
+                </Link> */}
             </ul>
           </div>
       </div>

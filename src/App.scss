@@ -794,6 +794,7 @@ nav {
         padding: 0 5%;
         display: flex;
         flex-direction: column;
+        align-items: center;
         .plan_item {
           padding: 16px;
           margin-bottom: 24px;
@@ -982,6 +983,11 @@ nav {
             }
           }
         }
+      }
+      .booking_list::after{
+        content:"";
+        display: block;
+        width:30%;
       }
     }
   }
@@ -1376,7 +1382,7 @@ nav {
         .plan_list {
           flex-direction: row;
           flex-wrap: wrap;
-          justify-content: space-between;
+          justify-content: center;
           .plan_item {
             width: 32%;
           }

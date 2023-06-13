@@ -1,9 +1,10 @@
-import React from 'react'
-import Avatar from '@mui/material/Avatar';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { Link } from 'react-router-dom'
+import React from "react";
+import Avatar from "@mui/material/Avatar";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from "react-router-dom";
+import { calendarData } from "../calendarData";
 
-function Booking({teachers}) {
+function Booking({ teachers }) {
   return (
     <section id="booking">
       <div className="booking_container">
@@ -18,7 +19,21 @@ function Booking({teachers}) {
             </p>
           </div>
           <ul className="booking_list">
-            <Link to="/Booking/calendar">
+            {calendarData.map((calendar) => (
+              <a href={calendar.url} target="_blank">
+                <li className="booking_item">
+                  <h3>{calendar.title}</h3>
+                  <div className="booking_item-info">
+                    <div className="booking_during">
+                      <FontAwesomeIcon icon="fa-clock" />
+                      55 minutes
+                    </div>
+                    <button className="btn">Book a Test</button>
+                  </div>
+                </li>
+              </a>
+            ))}
+            {/* <Link to="/Booking/calendar">
               <li className="booking_item">
                 <h3>CELPIP</h3>
                 <div className="booking_item-info">
@@ -28,7 +43,6 @@ function Booking({teachers}) {
                       .slice(5, 6)
                       .map((teacher) => (
                         <>
-                          {/* <Avatar src={teacher.img} /> */}
                           <span>{teacher.name}</span>
                         </>
                       ))}
@@ -45,17 +59,6 @@ function Booking({teachers}) {
               <li className="booking_item">
                 <h3>General(Speaking)</h3>
                 <div className="booking_item-info">
-                  {/* <div className="booking_teacher">
-                    {teachers
-                      .sort((a, b) => a.id - b.id)
-                      .slice(0, 1)
-                      .map((teacher) => (
-                        <>
-                          <Avatar src={teacher.img} />
-                          <span>{teacher.name}</span>
-                        </>
-                      ))}
-                  </div> */}
                   <div className="booking_during">
                     <FontAwesomeIcon icon="fa-clock" />
                     45 minutes
@@ -64,45 +67,10 @@ function Booking({teachers}) {
                 </div>
               </li>
             </Link>
-            {/* <Link to="/Booking/calendar">
-              <li className="booking_item">
-                <h3>General(Reading)</h3>
-                <div className="booking_item-info">
-                  <div className="booking_during">
-                    <FontAwesomeIcon icon="fa-clock" />
-                    45 minutes
-                  </div>
-                  <button className="btn">Book a Test</button>
-                </div>
-              </li>
-            </Link> */}
-            {/* <Link to="/Booking/calendar">
-              <li className="booking_item">
-                <h3>General(Writing)</h3>
-                <div className="booking_item-info">
-                  <div className="booking_during">
-                    <FontAwesomeIcon icon="fa-clock" />
-                    45 minutes
-                  </div>
-                  <button className="btn">Book a Test</button>
-                </div>
-              </li>
-            </Link> */}
             <Link to="/Booking/calendar">
               <li className="booking_item">
                 <h3>General(Listning)</h3>
                 <div className="booking_item-info">
-                  {/* <div className="booking_teacher">
-                    {teachers
-                      .sort((a, b) => a.id - b.id)
-                      .slice(3, 4)
-                      .map((teacher) => (
-                        <>
-                          <Avatar src={teacher.img} />
-                          <span>{teacher.name}</span>
-                        </>
-                      ))}
-                  </div> */}
                   <div className="booking_during">
                     <FontAwesomeIcon icon="fa-clock" />
                     45 minutes
@@ -115,17 +83,6 @@ function Booking({teachers}) {
               <li className="booking_item">
                 <h3>IELTS</h3>
                 <div className="booking_item-info">
-                  {/* <div className="booking_teacher">
-                    {teachers
-                      .sort((a, b) => a.id - b.id)
-                      .slice(4, 5)
-                      .map((teacher) => (
-                        <>
-                          <Avatar src={teacher.img} />
-                          <span>{teacher.name}</span>
-                        </>
-                      ))}
-                  </div> */}
                   <div className="booking_during">
                     <FontAwesomeIcon icon="fa-clock" />
                     45 minutes
@@ -133,7 +90,7 @@ function Booking({teachers}) {
                   <button className="btn">Book a Test</button>
                 </div>
               </li>
-            </Link>
+            </Link> */}
           </ul>
         </div>
       </div>
@@ -141,4 +98,4 @@ function Booking({teachers}) {
   );
 }
 
-export default Booking
+export default Booking;

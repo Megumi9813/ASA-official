@@ -14,7 +14,7 @@ function ProgramList() {
                 <ul className="programIntro_list">
                     {
                         programData
-                        .slice(3)
+                        .slice(1)
                         .map(program => (
                             <Program program={program} key={program.id}/>
                         ))

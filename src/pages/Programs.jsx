@@ -12,7 +12,7 @@ function Programs({testimonials}) {
         <Plans />
         <TestimonialPhotos testimonials={testimonials} /> 
         <System />
-        <MembershipIntro />
+        {/* <MembershipIntro /> */}
       </>
   )
 }
