@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Slider({ reviews }) {
   const [currentSlide, setCurrentSlide] = useState(0);
-  console.log(reviews);
 
   return (
     <>

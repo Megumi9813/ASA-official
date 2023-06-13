@@ -1,9 +1,8 @@
-import React from 'react'
-import ReviewImg from '../assets/Review.jpg'
-import Slider from '../components/UI/Slider'
+import React from "react";
+import ReviewImg from "../assets/Review.jpg";
+import Slider from "./UI/Slider";
 
 function Review({ reviews }) {
-
   return (
     <section
       id="review"
@@ -33,4 +32,4 @@ function Review({ reviews }) {
   );
 }
 
-export default Review
+export default Review;
