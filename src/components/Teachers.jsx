@@ -5,9 +5,9 @@ function Teachers({teachers}) {
 
   return (
     <section id="teachers">
-      <div className="section_intro">
+      <div className="section_intro" style={{maxWidth: "1200px"}}>
         <div className="section_title font02 color02">Our Team.</div>
-        <p className="font01 color02">
+        <p className="font01 color02" style={{margin: "0 5%"}}>
           To learn a language is to connect with the world as well as your own
           human capacities for personal growth. At ASA, our goal is to
           facilitate these connections by drawing on a broad spectrum of

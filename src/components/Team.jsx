@@ -5,16 +5,22 @@ import Teacher from './UI/Teacher'
 function Team({teachers}) {
   return (
     <section id="team">
-      <div className="section_intro">
+      <div
+        className="section_intro"
+        style={{ maxWidth: "1200px" }}
+      >
         <h2 className="section_title font02 color02">Our Team.</h2>
-        <p className="font01 color02" style={{maxWidth: "1200px", margin: "0 auto"}}>
+        <p
+          className="font01 color02"
+          style={{ margin: "0 5%" }}
+        >
           Having over 70 years of combined teaching experience, we are a group
           of dedicated education professionals who have taught students from a
           wide range of ages in Canada and overseas. We use literature, direct
           and indirect grammar instruction, conversation, and authentic
           materials to engage learners. Our students will develop their language
           proficiency, achieve higher test scores, and gain the confidence to
-          flourish in academic environments.
+          flourish in academic and professional environments.
         </p>
       </div>
       <div className="teacher_list-container">

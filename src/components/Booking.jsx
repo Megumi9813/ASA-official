@@ -64,21 +64,10 @@ function Booking({teachers}) {
                 </div>
               </li>
             </Link>
-            <Link to="/Booking/calendar">
+            {/* <Link to="/Booking/calendar">
               <li className="booking_item">
                 <h3>General(Reading)</h3>
                 <div className="booking_item-info">
-                  {/* <div className="booking_teacher">
-                    {teachers
-                      .sort((a, b) => a.id - b.id)
-                      .slice(1, 2)
-                      .map((teacher) => (
-                        <>
-                          <Avatar src={teacher.img} />
-                          <span>{teacher.name}</span>
-                        </>
-                      ))}
-                  </div> */}
                   <div className="booking_during">
                     <FontAwesomeIcon icon="fa-clock" />
                     45 minutes
@@ -86,22 +75,11 @@ function Booking({teachers}) {
                   <button className="btn">Book a Test</button>
                 </div>
               </li>
-            </Link>
-            <Link to="/Booking/calendar">
+            </Link> */}
+            {/* <Link to="/Booking/calendar">
               <li className="booking_item">
                 <h3>General(Writing)</h3>
                 <div className="booking_item-info">
-                  {/* <div className="booking_teacher">
-                    {teachers
-                      .sort((a, b) => a.id - b.id)
-                      .slice(2, 3)
-                      .map((teacher) => (
-                        <>
-                          <Avatar src={teacher.img} />
-                          <span>{teacher.name}</span>
-                        </>
-                      ))}
-                  </div> */}
                   <div className="booking_during">
                     <FontAwesomeIcon icon="fa-clock" />
                     45 minutes
@@ -109,7 +87,7 @@ function Booking({teachers}) {
                   <button className="btn">Book a Test</button>
                 </div>
               </li>
-            </Link>
+            </Link> */}
             <Link to="/Booking/calendar">
               <li className="booking_item">
                 <h3>General(Listning)</h3>
