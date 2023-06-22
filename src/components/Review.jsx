@@ -13,17 +13,6 @@ function Review({ reviews }) {
           <ul className="review_list">
             <li className="review_item">
               <Slider reviews={reviews} />
-              {/* <div className="review">
-                <h2 className="font02 color02">Student Stories</h2>
-                <p className="color02 font01">
-                  With the assistance of the exceptional teachers and programs
-                  here, you are on the right path to pursue whatever you aspire
-                  to achieve in the future.
-                </p>
-              </div>
-              <div className="name font02">
-                <h4>Miki T. (Japan)</h4>
-              </div> */}
             </li>
           </ul>
         </div>

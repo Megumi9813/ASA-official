@@ -40,13 +40,26 @@ function Slider({ reviews }) {
               )}
             </div>
             <div className="color02 font01" style={{ width: "60%" }}>
-              {reviews[currentSlide].comments.map((comment, index) => (
+              {reviews[currentSlide].comments ? (
                 <>
-                  <div key={index}>{comment}</div>
-                  <br />
+                  {reviews[currentSlide].comments.map((comment, index) => (
+                    <>
+                      <div key={index}>{comment}</div>
+                      <br />
+                    </>
+                  ))}
                 </>
-              ))}
-              {/* {reviews[currentSlide].comments[0]} */}
+              ) : (
+                <div style={{ width: "60%", aspectRatio: "16/9" }}>
+                  <iframe
+                    width="100%"
+                    height="100%"
+                    frameBorder="0"
+                    src={`https://www.youtube.com/embed/${reviews[currentSlide].url}`}
+                    allowFullScreen
+                  />
+                </div>
+              )}
             </div>
             <div
               style={{
@@ -55,7 +68,7 @@ function Slider({ reviews }) {
                 justifyContent: "center",
               }}
             >
-              {currentSlide !== 5 && (
+              {currentSlide !== reviews.length - 1 && (
                 <button
                   onClick={() => setCurrentSlide(currentSlide + 1)}
                   style={{
@@ -82,10 +95,20 @@ function Slider({ reviews }) {
               display: "flex",
               justifyContent: "center",
               marginTop: "35px",
+              alignItems: "center",
+              height: "50px",
             }}
           >
             <p style={{ marginRight: "4px" }}>{reviews[currentSlide].name}</p>
             <p>({reviews[currentSlide].country})</p>
+            <img
+              src={reviews[currentSlide].picture}
+              style={{
+                maxWidth: "40px",
+                marginLeft: "10px",
+                borderRadius: "50%",
+              }}
+            />
           </div>
         </>
       )}

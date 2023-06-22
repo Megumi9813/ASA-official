@@ -3,7 +3,7 @@ import React from 'react'
 function Testimonial({testimonial}) {
     
   return (
-    <div className="testimonial_content-wrapper">
+    <div className="testimonial_content-wrapper font01" style={{fontSize: "18px"}}>
         <p>{testimonial.comment}</p>
         <div className="student">
             <img src="" alt="" />

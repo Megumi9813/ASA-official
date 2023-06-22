@@ -1,5 +1,11 @@
 [[redirects]]
+    from = "/*"
+    to = "/index.html"
+    status = 200
+[[redirects]]
     from = "/asa_membership"
     to = "https://splendorous-toffee-fe0f55.netlify.app/"
     status = 301
     force = true
+
+    

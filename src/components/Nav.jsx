@@ -13,9 +13,14 @@ function Nav() {
   
   return (
     <nav>
-      <div className="nav_newsBar color01 font02">
+      <a
+        href='https://calendar.app.google/V2rLDpmnKm3UWAmC6'
+        target="_blank"
+        className="nav_newsBar color01 font02"
+        style={{textDecoration: "none"}}
+      >
         <h3>Book a free assessment to identify your needs!</h3>
-      </div>
+      </a>
       <div className="nav_container">
         <Link to="/" className="nav_logo">
           <img src={AsaLogo} alt="" className="logo" />

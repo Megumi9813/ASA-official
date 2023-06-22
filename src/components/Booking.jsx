@@ -18,7 +18,7 @@ function Booking({ teachers }) {
               your needs.
             </p>
           </div>
-          <ul className="booking_list">
+          <ul className="booking_list color02">
             {calendarData.map((calendar) => (
               <a href={calendar.url} target="_blank">
                 <li className="booking_item">

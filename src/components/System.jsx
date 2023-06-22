@@ -12,7 +12,7 @@ function System() {
               Here's How It Works
             </div>
           </div>
-          <ul className="system_list">
+          <ul className="system_list font01 color02">
             <li className="system_item">
               <FontAwesomeIcon icon="fa-comment-dots" className="color02" />
               <h4 className="font02">1. Send an email or Start a Chat</h4>
