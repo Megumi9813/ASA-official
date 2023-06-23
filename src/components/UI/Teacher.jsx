@@ -5,9 +5,6 @@ function Teacher({ teacher }) {
   const [showMore, setShowMore] = useState(false);
   const comment = teacher.selfIntroduction
 
-  useEffect(() => {
-  }, [])
-
   return (
     <li>
       <figure>

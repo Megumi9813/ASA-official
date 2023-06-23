@@ -14,7 +14,7 @@ function Home({ teachers, reviews }) {
       <Team teachers={teachers} />
       <SystemChart />
       <Services />
-      <Review reviews={reviews}/>
+      <Review reviews={reviews} />
     </>
   );
 }
