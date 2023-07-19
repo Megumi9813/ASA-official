@@ -5,7 +5,7 @@ import Nav from '../components/Nav'
 function ProgramIntro() {
   return (
     <>
-      <Nav />
+      {/* <Nav /> */}
       <ProgramList />
     </>
   )

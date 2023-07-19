@@ -5,7 +5,7 @@ import Nav from '../components/Nav'
 function Book({teachers}) {
   return (
     <>
-      <Nav />
+      {/* <Nav /> */}
       <Booking teachers={teachers} />
     </>
   )

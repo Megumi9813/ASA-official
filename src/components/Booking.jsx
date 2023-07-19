@@ -10,9 +10,7 @@ function Booking({ teachers }) {
       <div className="booking_container">
         <div className="container">
           <div className="section_intro">
-            <div className="section_title font02 color02">
-              Book a free assessment
-            </div>
+            <div className="section_title font02 color02">Book a free Assessment</div>
             <p className="font01 color02">
               Free speaking, writing, reading and grammar assessment to identify
               your needs.
@@ -28,7 +26,7 @@ function Booking({ teachers }) {
                       <FontAwesomeIcon icon="fa-clock" />
                       55 minutes
                     </div>
-                    <button className="btn">Book a Test</button>
+                    <button className="btn">Free Assessment</button>
                   </div>
                 </li>
               </a>

@@ -4,7 +4,7 @@ export default function BlogPage(blog) {
   console.log(blog.blog);
   return (
     <>
-      <Nav />
+      {/* <Nav /> */}
       <section id="blogPage">
         <div className="container" style={{ maxWidth: "65%" }}>
           <div className="section_intro">

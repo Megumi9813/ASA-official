@@ -3,21 +3,21 @@ import AsaLogo from '../assets/AsaLogo.png'
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-function Nav() {
+function Nav({ contactOpen, setContactOpen }) {
   function openMenu() {
     document.body.classList += " menu-open";
   }
   function closeMenu() {
-      document.body.classList.remove("menu-open");
+    document.body.classList.remove("menu-open");
   }
-  
+
   return (
     <nav>
       <a
-        href='https://calendar.app.google/V2rLDpmnKm3UWAmC6'
+        href="https://calendar.app.google/V2rLDpmnKm3UWAmC6"
         target="_blank"
         className="nav_newsBar color01 font02"
-        style={{textDecoration: "none"}}
+        style={{ textDecoration: "none" }}
       >
         <h3>Book a free assessment to identify your needs!</h3>
       </a>
@@ -38,12 +38,28 @@ function Nav() {
           </li>
           <li className="nav_list">
             <Link to="/Booking" className="nav_link font01">
-              Book a Test
+              Free Assessment
             </Link>
           </li>
           <li className="nav_list">
             <Link to="/Blog" className="nav_link font01">
               Blog
+            </Link>
+          </li>
+          <li>
+            <Link to="#">
+              <button
+                className="nav_link font01"
+                onClick={() => setContactOpen(!contactOpen)}
+                style={{
+                  backgroundColor: "white",
+                  border: "none",
+                  color: "#3f4a49",
+                }}
+              >
+                {console.log(contactOpen)}
+                Contact
+              </button>
             </Link>
           </li>
           {/* <Link to="/asa_membership" target="_blank" rel="noopener noreferrer">
@@ -77,7 +93,7 @@ function Nav() {
             </li>
             <li className="menu_list">
               <Link to="/Booking" className="menu__ink" onClick={closeMenu}>
-                Book a Test
+                Free Assessment
               </Link>
             </li>
             <li className="menu_list">

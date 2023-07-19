@@ -4,32 +4,34 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {Link} from 'react-router-dom'
 import emailjs from '@emailjs/browser';
 
-function Contact() {
-    const [contactOpen, setContactOpen] = useState(false);
-    const form = useRef();
+function Contact({ contactOpen, setContactOpen }) {
+  // const [contactOpen, setContactOpen] = useState(false);
+  const form = useRef();
 
-    const sendEmail = (e) => {
-        e.preventDefault();
-        const loading = document.querySelector(".modal__overlay--loading");
-        const success = document.querySelector(".modal__overlay--success");
-        loading.classList += " modal__overlay--visible"
-        emailjs
-            .sendForm(
-                "service_5ei0ik5",
-                "template_1i2ajw8",
-                form.current,
-                "FHcwu10LECmUbdMB0"
-            ).then(() => {
-                loading.classList.remove("modal__overlay--visible");
-                success.classList += " modal__overlay--visible";
-                console.log("worked!!!")
-            }).catch(() => {
-                loading.classList.remove("modal__overlay--visible");
-                alert(
-                    "The email server is temporaly unavailable. Please contact me directly to info@asavancouver.com"
-                );
-            });
-    };
+  const sendEmail = (e) => {
+    e.preventDefault();
+    const loading = document.querySelector(".modal__overlay--loading");
+    const success = document.querySelector(".modal__overlay--success");
+    loading.classList += " modal__overlay--visible";
+    emailjs
+      .sendForm(
+        "service_5ei0ik5",
+        "template_1i2ajw8",
+        form.current,
+        "FHcwu10LECmUbdMB0"
+      )
+      .then(() => {
+        loading.classList.remove("modal__overlay--visible");
+        success.classList += " modal__overlay--visible";
+        console.log("worked!!!");
+      })
+      .catch(() => {
+        loading.classList.remove("modal__overlay--visible");
+        alert(
+          "The email server is temporaly unavailable. Please contact me directly to info@asavancouver.com"
+        );
+      });
+  };
 
   return (
     <div id="contact">
@@ -56,7 +58,12 @@ function Contact() {
               <form ref={form} onSubmit={sendEmail}>
                 <div className="form__item">
                   <label className="form_item-label">Name</label>
-                  <input className="input" name="user_name" type="text"></input>
+                  <input
+                    className="input"
+                    name="user_name"
+                    type="text"
+                    required
+                  ></input>
                 </div>
                 <div className="form__item">
                   <label className="form_item-label">Email</label>
@@ -64,6 +71,7 @@ function Contact() {
                     className="input"
                     name="user_email"
                     type="email"
+                    required
                   ></input>
                 </div>
                 <div className="form__item">
@@ -72,6 +80,7 @@ function Contact() {
                     className="input"
                     name="message"
                     type="text"
+                    required
                   ></textarea>
                 </div>
                 <button id="contact_submit" className="form_submit">

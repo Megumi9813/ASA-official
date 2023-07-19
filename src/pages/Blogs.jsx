@@ -5,7 +5,7 @@ import Nav from '../components/Nav'
 function Blogs({blogs}) {
   return (
     <>
-      <Nav />
+      {/* <Nav /> */}
       <BlogList blogs={blogs}/>
     </>
   )

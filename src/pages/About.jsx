@@ -7,7 +7,7 @@ import Testimonials from '../components/Testimonials'
 function About({teachers, testimonials}) {
   return (
     <>
-      <Nav />
+      {/* <Nav /> */}
       <Teachers teachers={teachers} />
       <Testimonials testimonials={testimonials}/>
       <FAQs />

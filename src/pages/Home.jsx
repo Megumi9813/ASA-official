@@ -9,7 +9,7 @@ import Nav from '../components/Nav'
 function Home({ teachers, reviews }) {
   return (
     <>
-      <Nav />
+      {/* <Nav /> */}
       <Landing />
       <Team teachers={teachers} />
       <SystemChart />

@@ -19,6 +19,7 @@ import { doc, getDoc, collection, getDocs } from "firebase/firestore";
 import { db } from "./firebase";
 import Teachers from "./components/Teachers";
 import BlogPage from "./pages/BlogPage";
+import Nav from "./components/Nav";
 
 function App() {
   ScrollBackToTop();
@@ -26,6 +27,7 @@ function App() {
   const [blogs, setBlogs] = useState([]);
   const [testimonials, setTestimonials] = useState([]);
   const [reviews, setReviews] = useState([]);
+  const [contactOpen, setContactOpen] = useState(false);
   const { getData } = useContentful();
 
   useEffect(() => {
@@ -80,10 +82,14 @@ function App() {
 
   return (
     <div className="App">
-      <Contact />
+      <Contact contactOpen={contactOpen} setContactOpen={setContactOpen} />
       <ScrollToTop />
+      <Nav contactOpen={contactOpen} setContactOpen={setContactOpen} />
       <Routes>
-        <Route path="/" element={<Home teachers={teachers} reviews={reviews}/>} />
+        <Route
+          path="/"
+          element={<Home teachers={teachers} reviews={reviews} />}
+        />
         <Route
           path="/About"
           element={<About teachers={teachers} testimonials={testimonials} />}

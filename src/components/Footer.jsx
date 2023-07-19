@@ -77,7 +77,7 @@ function Footer() {
                   <Link to="/Programs">Programs</Link>
                 </li>
                 <li className="link_item">
-                  <Link to="/Booking">Book a Test</Link>
+                  <Link to="/Booking">Free Assessment</Link>
                 </li>
                 <li className="link_item">
                   <Link to="/Blog">Blog</Link>

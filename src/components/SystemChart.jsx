@@ -30,7 +30,7 @@ function System() {
             <li className="system_chart-item">
               <FontAwesomeIcon icon="fa-calendar-days" />
               <div className="system_chart-description">
-                <h4 className="font02">Book a Test</h4>
+                <h4 className="font02">Free Assessment</h4>
                 <p>
                   We invite all prospective students to register for a free
                   assessment where after a comprehensive grammar, reading,

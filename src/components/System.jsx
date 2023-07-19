@@ -23,7 +23,7 @@ function System() {
             </li>
             <li className="system_item">
               <FontAwesomeIcon icon="fa-calendar-days" className="color02" />
-              <h4 className="font02">2. Book a Test</h4>
+              <h4 className="font02">2. Free Assessment</h4>
               <p>
                 We invite all prospective students to register for a free
                 assessment where after a comprehensive grammar, reading, writing

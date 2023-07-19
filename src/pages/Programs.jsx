@@ -8,7 +8,7 @@ import Nav from '../components/Nav'
 function Programs({testimonials}) {
   return (
       <>
-        <Nav />
+        {/* <Nav /> */}
         <Plans />
         <TestimonialPhotos testimonials={testimonials} /> 
         <System />
