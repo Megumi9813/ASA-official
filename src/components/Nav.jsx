@@ -57,7 +57,6 @@ function Nav({ contactOpen, setContactOpen }) {
                   color: "#3f4a49",
                 }}
               >
-                {console.log(contactOpen)}
                 Contact
               </button>
             </Link>
