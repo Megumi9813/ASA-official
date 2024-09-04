@@ -1,6 +1,6 @@
-import React from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { Link } from 'react-router-dom'
+import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from "react-router-dom";
 
 function System() {
   return (
@@ -41,7 +41,7 @@ function System() {
             </li>
           </ul>
           <Link to="/Booking">
-            <button className="btn">Contatc Us</button>
+            <button className="btn">Contact Us</button>
           </Link>
         </div>
       </div>
@@ -49,4 +49,4 @@ function System() {
   );
 }
 
-export default System
+export default System;
